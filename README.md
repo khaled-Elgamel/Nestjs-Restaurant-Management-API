@@ -58,8 +58,8 @@ This project demonstrates modular architecture, clean code, input validation, an
 ### 1️⃣ Clone the repository
 
 ```bash
-git clone https://github.com/KhaledElgamel/nestjs-restaurant-management-api.git
-cd nestjs-restaurant-management-api
+git clone https://github.com/khaled-Elgamel/Nestjs-Restaurant-Management-API.git
+cd Nestjs-Restaurant-Management-API
 ```
 
 ### 2️⃣ Install dependencies
@@ -272,8 +272,8 @@ src
 ## ✨ Author
 
 **Khaled Mohamed Elgamel**  
-📧 [khaled.elgamel.dev@gmail.com]  
-🌐 [https://www.linkedin.com/in/khaled-elgamel](https://www.linkedin.com/in/khaled-elgamel)
+📧 [kelgamel67@gmail.com]  
+🌐 [https://www.linkedin.com/in/khaled-elgamel-298267235/](https://www.linkedin.com/in/khaled-elgamel-298267235/)
 
 ---
 
