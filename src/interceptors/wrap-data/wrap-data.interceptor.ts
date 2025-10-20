@@ -12,10 +12,7 @@ export class WrapDataInterceptor implements NestInterceptor {
     return next.handle().pipe(
       map((data) => {
         if (!data || (Array.isArray(data) && data.length === 0)) {
-          return {
-            message: 'No data found',
-            data: null,
-          };
+          return {};
         }
         return {
           status: 'success',

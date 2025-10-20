@@ -3,6 +3,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { User, UserSchema } from './users.schema';
 import { UsersController } from './users.controller';
 import { UsersService } from './users.service';
+import { UsersRestaurantsModule } from 'src/users-restaurants/users-restaurants.module';
 import {
   UserRestaurant,
   UserRestaurantSchema,
@@ -11,9 +12,10 @@ import {
 @Module({
   imports: [
     MongooseModule.forFeature([
-      { name: UserRestaurant.name, schema: UserRestaurantSchema },
       { name: User.name, schema: UserSchema },
+      { name: UserRestaurant.name, schema: UserRestaurantSchema },
     ]),
+    UsersRestaurantsModule,
   ],
   controllers: [UsersController],
   providers: [UsersService],

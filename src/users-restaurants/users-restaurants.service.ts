@@ -24,13 +24,13 @@ export class UserRestaurantService {
    * 2️⃣ If a duplicate exists (unique index violation), throw ConflictException
    * 3️⃣ Otherwise, return the newly created follow document
    */
-  async follow(userId: string, restaurantId: string): Promise<UserRestaurant> {
+  async follow(userId: string, restaurantId: string): Promise<string> {
     try {
       const follow = await this.userRestaurantModel.create({
         user: new Types.ObjectId(userId),
         restaurant: new Types.ObjectId(restaurantId),
       });
-      return follow;
+      return 'User followed the restaurant successfully';
       // Duplicate key error → user already follows this restaurant
     } catch (err) {
       if (err.code === 11000) {
@@ -79,7 +79,6 @@ export class UserRestaurantService {
    * 3️⃣ Return the list of populated documents
    */
   async getRestaurantFollowers(restaurantId: string) {
-    console.log('getRestaurantFollowers');
     return this.userRestaurantModel
       .find({ restaurant: new Types.ObjectId(restaurantId) })
       .populate({

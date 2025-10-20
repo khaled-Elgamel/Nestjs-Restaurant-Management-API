@@ -106,7 +106,6 @@ export class RestaurantsController {
   })
   @Get(':restaurantId/followers')
   getFollowers(@Param('restaurantId', ParseMongoIdPipe) restaurantId: string) {
-    console.log(restaurantId);
     return this.userRestaurantService.getRestaurantFollowers(restaurantId);
   }
 }

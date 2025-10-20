@@ -1,6 +1,5 @@
 import { Module } from '@nestjs/common';
 import { UserRestaurantService } from './users-restaurants.service';
-import { UserRestaurantController } from './users-restaurants.controller';
 import { MongooseModule } from '@nestjs/mongoose';
 import {
   UserRestaurantSchema,
@@ -21,7 +20,6 @@ import {
     ]),
   ],
   providers: [UserRestaurantService],
-  controllers: [UserRestaurantController],
   exports: [UserRestaurantService],
 })
 export class UsersRestaurantsModule {}
